@@ -1,0 +1,3 @@
+/media/mariem/D1/systemc_project/compiler_src/build/CMakeFiles/systemc2vhdl.dir
+/media/mariem/D1/systemc_project/compiler_src/build/CMakeFiles/edit_cache.dir
+/media/mariem/D1/systemc_project/compiler_src/build/CMakeFiles/rebuild_cache.dir
