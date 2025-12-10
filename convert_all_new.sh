@@ -38,9 +38,9 @@ total=0
 success=0
 failed=0
 
-echo -e "${BLUE}📁 Sources   :${NC} $SRC_DIR"
-echo -e "${BLUE}📁 Destination :${NC} $OUTPUT_DIR"
-echo -e "${BLUE}🔧 Compilateur :${NC} systemc2vhdl v2.0"
+echo -e "${BLUE} Sources   :${NC} $SRC_DIR"
+echo -e "${BLUE} Destination :${NC} $OUTPUT_DIR"
+echo -e "${BLUE} Compilateur :${NC} systemc2vhdl v2.0"
 echo ""
 
 # Parcourir tous les fichiers .cpp
@@ -75,7 +75,7 @@ done
 echo ""
 echo "=========================================="
 if [ $failed -eq 0 ]; then
-    echo -e "${GREEN}✅ Succès : $success/$total fichiers convertis${NC}"
+    echo -e "${GREEN} Succès : $success/$total fichiers convertis${NC}"
 else
     echo -e "Résultat : ${GREEN}$success succès${NC}, ${RED}$failed échecs${NC} sur $total fichiers"
 fi
@@ -83,10 +83,10 @@ echo "=========================================="
 echo ""
 
 # Afficher le contenu du répertoire de sortie
-echo "📂 Fichiers générés dans $OUTPUT_DIR/ :"
+echo " Fichiers générés dans $OUTPUT_DIR/ :"
 ls -lh "$OUTPUT_DIR"/*.vhdl 2>/dev/null | awk '{printf "   %s %10s  %s\n", $9, $5, $9}' | sed "s|$OUTPUT_DIR/||g"
 
 echo ""
-echo "💡 Conseil : Vous pouvez vérifier la syntaxe VHDL avec :"
+echo " Conseil : Vous pouvez vérifier la syntaxe VHDL avec :"
 echo "   ghdl -a vhdl_new/nom_fichier.vhdl"
 echo ""
