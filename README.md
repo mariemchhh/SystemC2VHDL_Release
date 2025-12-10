@@ -1,4 +1,4 @@
-# 🚀 SystemC to VHDL Compiler
+# SystemC to VHDL Compiler
 
 Un compilateur open-source performant capable de traduire des modules **SystemC** en code **VHDL synthétisable**.
 
