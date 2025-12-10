@@ -27,13 +27,13 @@ Module parse_systemc_file(const std::string& path) {
 
     std::smatch match;
 
-    // 1️⃣ Nom du module
+    //  Nom du module
     std::regex module_regex(R"(SC_MODULE\((\w+)\))");
     if (std::regex_search(content, match, module_regex)) {
         mod.name = match[1];
     }
 
-    // 2️⃣ Ports (sc_in et sc_out) avec support des déclarations multiples
+    //  Ports (sc_in et sc_out) avec support des déclarations multiples
     // Regex améliorée : capture direction, type, et liste de noms
     // Support des types imbriqués comme sc_out<sc_uint<8>>
     std::regex port_regex(R"(sc_(in|out)<(.*?)>\s+([^;]+);)");
@@ -68,7 +68,7 @@ Module parse_systemc_file(const std::string& path) {
         }
     }
 
-    // 3️⃣ Liste de sensibilité (sensitive << a << b << c;)
+    //  Liste de sensibilité (sensitive << a << b << c;)
     std::regex sens_regex(R"(sensitive\s*<<\s*([^;]+);)");
     if (std::regex_search(content, match, sens_regex)) {
         std::string sens_str = match[1].str();
@@ -82,7 +82,7 @@ Module parse_systemc_file(const std::string& path) {
         }
     }
 
-    // 4️⃣ Corps de méthode - Extraire tout le contenu de compute()
+    //  Corps de méthode - Extraire tout le contenu de compute()
     // Amélioration : supporte void compute() ET void compute(nom_module)
     // Et gère correctement les accolades imbriquées
     size_t compute_pos = content.find("void compute");
