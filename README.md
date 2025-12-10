@@ -6,7 +6,7 @@ Un compilateur open-source performant capable de traduire des modules **SystemC*
 ![Language](https://img.shields.io/badge/language-C%2B%2B17-orange.svg)
 ![Build](https://img.shields.io/badge/build-CMake-green.svg)
 
-## 🌟 Fonctionnalités
+##  Fonctionnalités
 
 Ce compilateur analyse le code source C++ (SystemC) et génère automatiquement l'architecture VHDL correspondante.
 
@@ -21,7 +21,7 @@ Ce compilateur analyse le code source C++ (SystemC) et génère automatiquement 
   - Gestion automatique des listes de sensibilité.
 - **Code Synthétisable** : Le VHDL généré est prêt pour la synthèse sur FPGA (Intel Quartus, Xilinx Vivado).
 
-## 📦 Installation
+##  Installation
 
 ### Prérequis
 - Compilateur C++ (GCC/Clang)
@@ -44,7 +44,7 @@ cmake ..
 make
 ```
 
-## 🚀 Utilisation
+##  Utilisation
 
 ### Conversion d'un fichier unique
 
@@ -60,7 +60,7 @@ Pour convertir tous les fichiers `.cpp` du dossier `src/` :
 ./convert_all_new.sh
 ```
 
-## 📝 Exemples
+## Exemples
 
 ### Entrée : SystemC (`counter.cpp`)
 
@@ -112,13 +112,6 @@ begin
   end process;
 end architecture;
 ```
-
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request pour :
-- Ajouter le support de nouveaux types SystemC
-- Améliorer la traduction des structures de contrôle
-- Ajouter des tests unitaires
 
 ## 📄 Licence
 
