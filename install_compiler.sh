@@ -19,7 +19,7 @@ echo ""
 
 # Vérifier que nous sommes dans le bon répertoire
 if [ ! -d "$COMPILER_SRC" ]; then
-    echo "❌ Erreur : Répertoire $COMPILER_SRC non trouvé"
+    echo " Erreur : Répertoire $COMPILER_SRC non trouvé"
     exit 1
 fi
 
@@ -34,7 +34,7 @@ cd "$BUILD_DIR"
 CC=gcc CXX=g++ cmake .. > /dev/null 2>&1
 
 if [ $? -ne 0 ]; then
-    echo "❌ Erreur lors de la configuration CMake"
+    echo "Erreur lors de la configuration CMake"
     exit 1
 fi
 
